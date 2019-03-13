@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <title>Train Schedule</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Train Schedule</h1>
+            <p class="lead">Chooooo Choooooo</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <p id="name"></p>
+            </div>
+            <div class="col-sm">
+                <p id="destination"></p>
+            </div>
+            <div class="col-sm">
+                <p id="frequency"></p>
+            </div>
+            <div class="col-sm">
+                <p id="nextArrival"></p>
+            </div>
+            <div class="col-sm">
+                <p id="minAway"></p>
+            </div>
+        </div>
+    </div>
+    <form>
+        <div class="form-group">
+            <label for="train-name-form">Train Name</label>
+            <input type="name" class="form-control" id="train-name" aria-describedby="emailHelp"
+                placeholder="Train Name...">
+        </div>
+        <div class="form-group">
+            <label for="train-destination-form">Destination</label>
+            <input type="destination" class="form-control" id="train-destination" placeholder="Destination...">
+        </div>
+        <div class="form-group">
+            <label for="first-train-form">First Train Time</label>
+            <input type="destination" class="form-control" id="train-time" placeholder="Military Time (HH:mm)">
+        </div>
+        <div class="form-group">
+            <label for="train-frequency-form">Train Frequency (min)</label>
+            <input type="frequency" class="form-control" id="train-frequency"
+                placeholder="This train comes every ___ minutes">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <div id="train-times">
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/app.js"></script>
+</body>
+
+</html>
